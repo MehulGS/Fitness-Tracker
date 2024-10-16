@@ -25,7 +25,7 @@ const WorkoutForm = ({ initialData, onSuccess }) => {
     return (
         <Container maxWidth="sm">
             <Box mt={3} border={1} borderColor="grey.300" borderRadius={2} p={3}>
-                <Typography variant="h6" align="center">{initialData ? 'Edit' : 'Add'} Workout</Typography>
+                <Typography variant="h6" align="center"sx={{color:"white"}} >{initialData ? 'Edit' : 'Add'} Workout</Typography>
                 <form onSubmit={handleSubmit}>
                     <TextField
                         label="Activity"
@@ -34,6 +34,7 @@ const WorkoutForm = ({ initialData, onSuccess }) => {
                         value={activity}
                         onChange={(e) => setActivity(e.target.value)}
                         required
+                        sx={{backgroundColor:"white"}}
                     />
                     <TextField
                         label="Duration (minutes)"
@@ -42,6 +43,8 @@ const WorkoutForm = ({ initialData, onSuccess }) => {
                         value={duration}
                         onChange={(e) => setDuration(e.target.value)}
                         required
+                        type="Number"
+                        sx={{backgroundColor:"white"}}
                     />
                     <TextField
                         label="Calories Burned"
@@ -50,6 +53,8 @@ const WorkoutForm = ({ initialData, onSuccess }) => {
                         value={caloriesBurned}
                         onChange={(e) => setCaloriesBurned(e.target.value)}
                         required
+                        type='Number'
+                        sx={{backgroundColor:"white"}}
                     />
                     <Button type="submit" variant="contained" color="primary" fullWidth>
                         {initialData ? 'Update' : 'Add'} Workout

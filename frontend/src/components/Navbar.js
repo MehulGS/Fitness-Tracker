@@ -104,7 +104,7 @@ const Navbar = () => {
         <AppBar position="static" sx={{ backgroundColor: '#f5426f' }}>
             <Toolbar>
                 <Typography variant="h6" sx={{ flexGrow: 1 }}>
-                    Fitness Tracker
+                    FIT-HIT
                 </Typography>
                 {user ? (
                     isMobile ? (

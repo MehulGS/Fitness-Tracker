@@ -29,7 +29,6 @@ const LoginPage = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 height: '100vh',
-                background: 'linear-gradient(135deg, #74ebd5, #ACB6E5)', // Attractive background
             }}
         >
             <Paper
@@ -40,13 +39,14 @@ const LoginPage = () => {
                     maxWidth: '400px',
                     width: '100%',
                     boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)',
+                    backgroundColor:"#f5426f"
                 }}
             >
                 <Box textAlign="center" mb={3}>
-                    <Typography variant="h4" fontWeight="bold" color="primary">
+                    <Typography variant="h4" fontWeight="bold" sx={{color:"white"}} >
                         Welcome Back
                     </Typography>
-                    <Typography variant="body1" color="textSecondary">
+                    <Typography variant="body1" sx={{color:"white"}}>
                         Please login to your account
                     </Typography>
                 </Box>
@@ -106,9 +106,9 @@ const LoginPage = () => {
                 </form>
 
                 <Box textAlign="center" mt={2}>
-                    <Typography variant="body2">
+                    <Typography variant="body2"sx={{color:"white"}} >
                         Don't have an account?{' '}
-                        <Button href="/signup" color="primary" sx={{ fontWeight: 'bold' }}>
+                        <Button href="/signup"  sx={{ fontWeight: 'bold' ,color:"green"}}>
                             Sign Up
                         </Button>
                     </Typography>

@@ -24,9 +24,9 @@ const GoalForm = ({ initialData, onSuccess }) => {
 
     return (
         <Container maxWidth="sm">
-            <Paper elevation={3} style={{ padding: '16px', marginTop: '16px' }}>
+            <Paper elevation={3} style={{ padding: '16px', marginTop: '16px',border:"2px solid  white" ,backgroundColor:"black"}}>
                 <Box mt={3}>
-                    <Typography variant="h6" align="center">{initialData ? 'Edit' : 'Add'} Goal</Typography>
+                    <Typography variant="h6" align="center"sx={{color:"white"}} >{initialData ? 'Edit' : 'Add'} Goal</Typography>
                     <form onSubmit={handleSubmit}>
                         <TextField
                             label="Goal Type"
@@ -35,6 +35,7 @@ const GoalForm = ({ initialData, onSuccess }) => {
                             value={goalType}
                             onChange={(e) => setGoalType(e.target.value)}
                             required
+                            sx={{backgroundColor:"white"}}
                         />
                         <TextField
                             label="Target Value"
@@ -44,8 +45,9 @@ const GoalForm = ({ initialData, onSuccess }) => {
                             onChange={(e) => setTargetValue(e.target.value)}
                             required
                             type="number"
+                            sx={{backgroundColor:"white"}}
                         />
-                        <FormControl fullWidth margin="normal" required>
+                        <FormControl fullWidth margin="normal" required sx={{backgroundColor:"white"}} >
                             <InputLabel>Time Frame</InputLabel>
                             <Select
                                 value={timeFrame}
